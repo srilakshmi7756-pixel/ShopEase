@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', () => { document.getElementById('contactForm')?.addEventListener('submit', e => { e.preventDefault(); const status = document.getElementById('contactStatus'); status.textContent = 'Thank you! Your message has been recorded in this demo.'; status.style.color = '#4ed9a0'; e.target.reset(); }); });

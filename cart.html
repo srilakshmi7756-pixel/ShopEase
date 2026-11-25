@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | ShopEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            SHOP<span>EASE.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="review.html">Reviews</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-link">Login</a>
+
+            <a href="signup.html" class="signup-link">Sign Up</a>
+
+            <a href="cart.html" class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CART HERO -->
+
+    <section class="cart-hero">
+
+        <span class="small-title">YOUR SHOPPING SPACE</span>
+
+        <h1>My <span>Shopping Cart.</span></h1>
+
+        <p>Review your items and get ready for checkout.</p>
+
+    </section>
+
+
+    <!-- CART MAIN -->
+
+    <main class="cart-container">
+
+        <section class="cart-left">
+
+            <div class="cart-heading">
+
+                <h2>Your Items</h2>
+
+                <span id="item-count">0 Items</span>
+
+            </div>
+
+
+            <!-- CART PRODUCTS -->
+
+            <div id="cart-items">
+
+                <!-- JavaScript will add products here -->
+
+            </div>
+
+
+            <!-- EMPTY CART -->
+
+            <div id="empty-cart" class="empty-cart">
+
+                <div class="empty-icon">🛒</div>
+
+                <h2>Your cart is empty</h2>
+
+                <p>Looks like you haven't added anything yet.</p>
+
+                <a href="products.html" class="continue-shopping">
+                    Explore Products
+                </a>
+
+            </div>
+
+
+            <a href="products.html" class="back-shopping">
+                ← Continue Shopping
+            </a>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <aside class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₹0</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <strong id="delivery">₹0</strong>
+            </div>
+
+            <div class="summary-row discount-row">
+                <span>Discount</span>
+                <strong id="discount">₹0</strong>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+                <span>Total Amount</span>
+                <strong id="total">₹0</strong>
+            </div>
+
+            <div class="coupon-box">
+
+                <label for="coupon">Have a promo code?</label>
+
+                <div class="coupon-input">
+
+                    <input type="text" id="coupon"
+                        placeholder="Enter coupon code">
+
+                    <button id="applyCoupon">Apply</button>
+
+                </div>
+
+                <p id="coupon-message"></p>
+
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout →
+            </button>
+
+            <div class="secure-payment">
+                🔒 Secure and Safe Checkout
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+            <p>Premium Shopping Experience.</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+
+
+</body>
+
+</html>

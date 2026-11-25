@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase | Seller Dashboard</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/shopkeeper.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Shop<span>Ease.</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="shopkeeper.html" class="active">Seller Center</a>
+    </nav>
+</header>
+
+
+<!-- DASHBOARD -->
+<main class="seller-container">
+
+    <section class="seller-heading">
+        <div>
+            <p class="small-heading">SELLER CENTER</p>
+            <h1>Manage Your <span>Shop</span></h1>
+            <p>Add products and manage your inventory from one place.</p>
+        </div>
+
+        <div class="seller-icon">🏪</div>
+    </section>
+
+
+    <!-- STATISTICS -->
+    <section class="seller-stats">
+
+        <div class="stat-card">
+            <span>📦</span>
+            <h2 id="totalProducts">0</h2>
+            <p>Total Products</p>
+        </div>
+
+        <div class="stat-card">
+            <span>💰</span>
+            <h2 id="totalValue">₹0</h2>
+            <p>Inventory Value</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🛒</span>
+            <h2 id="totalStock">0</h2>
+            <p>Total Stock</p>
+        </div>
+
+    </section>
+
+
+    <!-- ADD PRODUCT FORM -->
+    <section class="seller-form-section">
+
+        <div class="section-heading">
+            <div>
+                <p class="small-heading">INVENTORY MANAGEMENT</p>
+                <h2>Add New Product</h2>
+            </div>
+
+            <span class="form-icon">＋</span>
+        </div>
+
+
+        <form id="productForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" id="productName"
+                        placeholder="Enter product name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Product Price (₹)</label>
+                    <input type="number" id="productPrice"
+                        placeholder="Enter price" min="1" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="productCategory" required>
+                        <option value="">Select Category</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Footwear</option>
+                        <option>Accessories</option>
+                        <option>Home & Living</option>
+                        <option>Beauty</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Stock Quantity</label>
+                    <input type="number" id="productStock"
+                        placeholder="Enter quantity" min="0" step="1" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Product Description</label>
+                    <textarea id="productDescription"
+                        placeholder="Describe your product..." required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Product Image</label>
+                    <input type="file" id="productImage"
+                        accept="image/png, image/jpeg, image/webp" required>
+                    <p class="input-hint">Upload JPG, PNG or WEBP image (maximum 2 MB).</p>
+                </div>
+
+            </div>
+
+            <button type="submit" class="add-product-btn" id="submitBtn">
+                + Add Product
+            </button>
+
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- PRODUCT LIST -->
+    <section class="my-products-section">
+
+        <div class="section-heading">
+            <div>
+                <p class="small-heading">YOUR INVENTORY</p>
+                <h2>My Products</h2>
+            </div>
+
+            <span class="product-count" id="productCount">0 Products</span>
+        </div>
+
+        <div id="sellerProductList" class="seller-product-grid">
+
+            <div class="empty-state">
+                <span>📦</span>
+                <h3>No Products Added Yet</h3>
+                <p>Your added products will appear here.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="seller-footer">
+    <p>© 2026 ShopEase. Seller Center.</p>
+</footer>
+
+
+<script src="js/script.js"></script>
+<script src="js/shopkeeper.js"></script>
+
+</body>
+</html>

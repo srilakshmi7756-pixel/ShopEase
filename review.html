@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Reviews | ShopEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/review.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            SHOP<span>EASE.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="review.html" class="active">Reviews</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-link">Login</a>
+
+            <a href="signup.html" class="signup-link">Sign Up</a>
+
+            <a href="cart.html" class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="review-hero">
+
+        <span class="small-title">CUSTOMER EXPERIENCES</span>
+
+        <h1>Real Voices. <span>Real Reviews.</span></h1>
+
+        <p>
+            Your feedback helps us improve and create
+            a better shopping experience.
+        </p>
+
+    </section>
+
+
+    <!-- RATING OVERVIEW -->
+
+    <main class="review-container">
+
+        <section class="rating-overview">
+
+            <div class="rating-main">
+
+                <h2 id="averageRating">5.0</h2>
+
+                <div class="rating-stars">★★★★★</div>
+
+                <p id="totalReviews">Based on 3 reviews</p>
+
+            </div>
+
+            <div class="rating-message">
+
+                <h3>We value your opinion.</h3>
+
+                <p>
+                    Every review matters. Share your experience
+                    and help other customers make better choices.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REVIEW FORM -->
+
+        <section class="review-form-section">
+
+            <div class="review-form-heading">
+
+                <span class="small-title">SHARE YOUR EXPERIENCE</span>
+
+                <h2>Write a Review</h2>
+
+                <p>Tell us what you think about your purchase.</p>
+
+            </div>
+
+
+            <form id="reviewForm">
+
+                <div class="review-form-grid">
+
+                    <div class="review-input-group">
+
+                        <label for="reviewName">Your Name</label>
+
+                        <input type="text" id="reviewName"
+                            placeholder="Enter your name" required>
+
+                    </div>
+
+
+                    <div class="review-input-group">
+
+                        <label for="reviewEmail">Email Address</label>
+
+                        <input type="email" id="reviewEmail"
+                            placeholder="Enter your email" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review-input-group">
+
+                    <label for="reviewProduct">Select Product</label>
+
+                    <select id="reviewProduct" required>
+
+                        <option value="">Choose a product</option>
+
+                        <option>Wireless Headphones</option>
+
+                        <option>Smart Watch</option>
+
+                        <option>Running Shoes</option>
+
+                        <option>Wireless Earbuds</option>
+
+                        <option>Men's T-Shirt</option>
+
+                        <option>Travel Backpack</option>
+
+                        <option>Modern Table Lamp</option>
+
+                        <option>Premium Sunglasses</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="review-input-group">
+
+                    <label>Your Rating</label>
+
+                    <div class="star-selector" id="starSelector">
+
+                        <button type="button" data-rating="1">★</button>
+
+                        <button type="button" data-rating="2">★</button>
+
+                        <button type="button" data-rating="3">★</button>
+
+                        <button type="button" data-rating="4">★</button>
+
+                        <button type="button" data-rating="5">★</button>
+
+                    </div>
+
+                    <p id="ratingText">Select your rating</p>
+
+                </div>
+
+
+                <div class="review-input-group">
+
+                    <label for="reviewMessage">Your Review</label>
+
+                    <textarea id="reviewMessage"
+                        placeholder="Write your experience here..."
+                        rows="5" required></textarea>
+
+                </div>
+
+
+                <p id="reviewFormMessage"></p>
+
+
+                <button type="submit" class="review-submit-btn">
+                    Submit Review →
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- CUSTOMER REVIEWS -->
+
+        <section class="customer-reviews">
+
+            <div class="customer-review-heading">
+
+                <div>
+                    <span class="small-title">COMMUNITY FEEDBACK</span>
+                    <h2>What Customers Say</h2>
+                </div>
+
+                <span id="reviewCountLabel">3 Reviews</span>
+
+            </div>
+
+
+            <div class="review-list" id="reviewList">
+
+
+                <article class="review-card">
+
+                    <div class="review-card-top">
+
+                        <div class="customer-avatar">A</div>
+
+                        <div>
+                            <h3>Alex Johnson</h3>
+                            <p>Wireless Headphones</p>
+                        </div>
+
+                    </div>
+
+                    <div class="customer-stars">★★★★★</div>
+
+                    <p class="customer-review-text">
+                        Great sound quality and comfortable design.
+                        Really happy with the product.
+                    </p>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="review-card-top">
+
+                        <div class="customer-avatar">S</div>
+
+                        <div>
+                            <h3>Sarah Williams</h3>
+                            <p>Smart Watch</p>
+                        </div>
+
+                    </div>
+
+                    <div class="customer-stars">★★★★★</div>
+
+                    <p class="customer-review-text">
+                        Stylish design and useful features.
+                        The shopping experience was smooth.
+                    </p>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="review-card-top">
+
+                        <div class="customer-avatar">R</div>
+
+                        <div>
+                            <h3>Rahul Sharma</h3>
+                            <p>Running Shoes</p>
+                        </div>
+
+                    </div>
+
+                    <div class="customer-stars">★★★★☆</div>
+
+                    <p class="customer-review-text">
+                        Comfortable shoes and good value for money.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+            <p>Premium Shopping Experience.</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/review.js"></script>
+
+</body>
+
+</html>

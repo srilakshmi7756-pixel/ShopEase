@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | ShopEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            SHOP<span>EASE.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="review.html">Reviews</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-link">Login</a>
+
+            <a href="signup.html" class="signup-link">Sign Up</a>
+
+            <a href="cart.html" class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- SIGNUP SECTION -->
+
+    <main class="signup-container">
+
+        <!-- LEFT SIDE -->
+
+        <section class="signup-welcome">
+
+            <span class="small-title">WELCOME TO SHOPEASE</span>
+
+            <h1>Shopping made <span>better.</span></h1>
+
+            <p>
+                Create your account and discover a smarter
+                and more enjoyable shopping experience.
+            </p>
+
+            <div class="welcome-features">
+
+                <div>
+                    <span>✦</span>
+                    <p>Discover amazing products</p>
+                </div>
+
+                <div>
+                    <span>✦</span>
+                    <p>Enjoy a smooth shopping experience</p>
+                </div>
+
+                <div>
+                    <span>✦</span>
+                    <p>Keep your favourite products together</p>
+                </div>
+
+            </div>
+
+            <div class="welcome-decoration">SHOP<br>EASE.</div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="signup-form-section">
+
+            <div class="signup-card">
+
+                <div class="form-heading">
+
+                    <span class="small-title">START YOUR JOURNEY</span>
+
+                    <h2>Create Account</h2>
+
+                    <p>Enter your details to get started.</p>
+
+                </div>
+
+
+                <form id="signupForm">
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">Full Name</label>
+
+                        <input type="text" id="fullName"
+                            placeholder="Enter your full name" required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input type="email" id="email"
+                            placeholder="example@gmail.com" required>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input type="tel" id="phone"
+                            placeholder="Enter 10-digit number"
+                            maxlength="10" required>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">Password</label>
+
+                        <div class="password-box">
+
+                            <input type="password" id="password"
+                                placeholder="Create a password" required>
+
+                            <button type="button" class="toggle-password"
+                                data-target="password">
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="password-box">
+
+                            <input type="password" id="confirmPassword"
+                                placeholder="Enter password again" required>
+
+                            <button type="button" class="toggle-password"
+                                data-target="confirmPassword">
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms-box">
+
+                        <input type="checkbox" id="terms" required>
+
+                        <label for="terms">
+                            I agree to the Terms & Conditions.
+                        </label>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <p id="formMessage"></p>
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit" class="create-account-btn">
+                        Create My Account →
+                    </button>
+
+                </form>
+
+
+                <div class="login-text">
+
+                    Already have an account?
+
+                    <a href="login.html">Login</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+            <p>Premium Shopping Experience.</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/signup.js"></script>
+
+</body>
+
+</html>

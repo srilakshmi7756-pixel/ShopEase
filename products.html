@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Products | ShopEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        SHOP<span>EASE.</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="review.html">Reviews</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="signup.html" class="signup-link">Sign Up</a>
+        <a href="cart.html" class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+
+</header>
+
+
+<!-- PAGE INTRO -->
+
+<section class="shop-hero">
+
+    <div>
+        <span class="small-title">DISCOVER SOMETHING NEW</span>
+
+        <h1>Explore Our <span>Collection.</span></h1>
+
+        <p>
+            Find your favourites from our carefully selected
+            collection of electronics, fashion and lifestyle products.
+        </p>
+    </div>
+
+    <div class="shop-hero-icon">✦</div>
+
+</section>
+
+
+<!-- SHOP CONTENT -->
+
+<main class="shop-container">
+
+    <!-- SEARCH AND SORT -->
+
+    <div class="shop-toolbar">
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="search" id="searchInput"
+                   placeholder="Search products...">
+        </div>
+
+        <select id="sortSelect">
+            <option value="default">Sort: Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+        </select>
+
+    </div>
+
+
+    <div class="shop-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="shop-sidebar">
+
+            <h3>Categories</h3>
+
+            <button class="filter-btn active" data-category="All">
+                All Products
+            </button>
+
+            <button class="filter-btn" data-category="Electronics">
+                Electronics
+            </button>
+
+            <button class="filter-btn" data-category="Fashion">
+                Fashion
+            </button>
+
+            <button class="filter-btn" data-category="Accessories">
+                Accessories
+            </button>
+
+            <button class="filter-btn" data-category="Home">
+                Home & Living
+            </button>
+
+            <div class="sidebar-offer">
+                <span>SHOP SMARTER</span>
+                <h3>Find your next favourite.</h3>
+                <p>Explore our latest collection.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- PRODUCTS AREA -->
+
+        <section class="shop-products">
+
+            <div class="products-heading">
+                <div>
+                    <h2>All Products</h2>
+                    <p id="resultCount">Showing all products</p>
+                </div>
+            </div>
+
+
+            <div class="shop-product-grid" id="productGrid">
+
+
+                <!-- PRODUCT 1 -->
+
+                <article class="shop-product-card"
+                    data-name="Wireless Headphones"
+                    data-category="Electronics"
+                    data-price="999">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">25% OFF</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+                            alt="Wireless Headphones">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">ELECTRONICS</span>
+
+                        <h3>Wireless Headphones</h3>
+
+                        <div class="shop-rating">★★★★★
+                            <span>(120 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹999</strong>
+                            <del>₹1,299</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Wireless Headphones', 999)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+
+                <article class="shop-product-card"
+                    data-name="Smart Watch"
+                    data-category="Accessories"
+                    data-price="1499">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">20% OFF</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+                            alt="Smart Watch">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">ACCESSORIES</span>
+
+                        <h3>Smart Watch</h3>
+
+                        <div class="shop-rating">★★★★★
+                            <span>(95 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹1,499</strong>
+                            <del>₹1,899</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Smart Watch', 1499)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+
+                <article class="shop-product-card"
+                    data-name="Running Shoes"
+                    data-category="Fashion"
+                    data-price="1049">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">30% OFF</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                            alt="Running Shoes">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">FASHION</span>
+
+                        <h3>Running Shoes</h3>
+
+                        <div class="shop-rating">★★★★★
+                            <span>(210 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹1,049</strong>
+                            <del>₹1,499</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Running Shoes', 1049)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+
+                <article class="shop-product-card"
+                    data-name="Wireless Earbuds"
+                    data-category="Electronics"
+                    data-price="799">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">15% OFF</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600"
+                            alt="Wireless Earbuds">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">ELECTRONICS</span>
+
+                        <h3>Wireless Earbuds</h3>
+
+                        <div class="shop-rating">★★★★★
+                            <span>(85 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹799</strong>
+                            <del>₹999</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Wireless Earbuds', 799)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 5 -->
+
+                <article class="shop-product-card"
+                    data-name="Mens T Shirt"
+                    data-category="Fashion"
+                    data-price="499">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">HOT</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            alt="Men T Shirt">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">FASHION</span>
+
+                        <h3>Men's T-Shirt</h3>
+
+                        <div class="shop-rating">★★★★☆
+                            <span>(75 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹499</strong>
+                            <del>₹699</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Mens T-Shirt', 499)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 6 -->
+
+                <article class="shop-product-card"
+                    data-name="Travel Backpack"
+                    data-category="Fashion"
+                    data-price="899">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">NEW</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+                            alt="Travel Backpack">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">FASHION</span>
+
+                        <h3>Travel Backpack</h3>
+
+                        <div class="shop-rating">★★★★★
+                            <span>(65 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹899</strong>
+                            <del>₹1,199</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Travel Backpack', 899)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 7 -->
+
+                <article class="shop-product-card"
+                    data-name="Table Lamp"
+                    data-category="Home"
+                    data-price="699">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">NEW</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+                            alt="Table Lamp">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">HOME & LIVING</span>
+
+                        <h3>Modern Table Lamp</h3>
+
+                        <div class="shop-rating">★★★★☆
+                            <span>(55 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹699</strong>
+                            <del>₹899</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Table Lamp', 699)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 8 -->
+
+                <article class="shop-product-card"
+                    data-name="Sunglasses"
+                    data-category="Accessories"
+                    data-price="599">
+
+                    <div class="shop-product-image">
+
+                        <span class="sale-label">20% OFF</span>
+
+                        <button class="shop-wishlist"
+                            aria-label="Add to wishlist">♡</button>
+
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600"
+                            alt="Sunglasses">
+
+                    </div>
+
+                    <div class="shop-product-info">
+
+                        <span class="shop-category">ACCESSORIES</span>
+
+                        <h3>Premium Sunglasses</h3>
+
+                        <div class="shop-rating">★★★★★
+                            <span>(90 reviews)</span>
+                        </div>
+
+                        <div class="shop-price">
+                            <strong>₹599</strong>
+                            <del>₹799</del>
+                        </div>
+
+                        <button class="shop-add-btn"
+                            onclick="addToCart('Sunglasses', 599)">
+                            Add to Cart +
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="no-products" id="noProducts">
+                No products found. Try another search.
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- IMAGE PREVIEW -->
+
+<div class="image-modal" id="imageModal">
+
+    <button class="close-modal" id="closeModal">&times;</button>
+
+    <img src="" id="previewImage" alt="Product Preview">
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-bottom">
+        <p>© 2026 ShopEase. All Rights Reserved.</p>
+        <p>Premium Shopping Experience.</p>
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/products.js"></script>
+
+</body>
+</html>
